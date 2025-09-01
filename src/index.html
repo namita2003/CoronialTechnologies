@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send WhatsApp Message</title>
+</head>
+
+<body>
+
+    <button onclick="sendWhatsAppMessage()">Send WhatsApp Message</button>
+
+    <script>
+        function sendWhatsAppMessage() {
+            // Replace with your phone number in international format (no '+' sign, just country code + number)
+            const phoneNumber = "1234567890";
+
+            // Your message text (URL-encoded)
+            const message = encodeURIComponent("Hello! I'd like to chat with you on WhatsApp.");
+
+            // Construct the WhatsApp URL
+            const url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            // Open in a new tab
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
